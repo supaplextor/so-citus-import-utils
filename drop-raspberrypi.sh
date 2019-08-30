@@ -2,7 +2,7 @@
 
 db=raspberrypi
 
-for node in `echo compute{04,06,10,12,14,16,18,20,22,24}`
+for node in `echo compute{04,06,10,12,14,16,18,20,22,24,26,28,30}`
 do
 	(
 	psql -h localhost -U postgres $db -c 'SELECT * from master_remove_node('\'$node\'','\'5432\'');'

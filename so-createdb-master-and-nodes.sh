@@ -2,7 +2,7 @@
 
 db=stackoverflow
 
-for node in `echo claw compute{04,06,10,12,14,16,18,20,22,24}`
+for node in `echo claw compute{04,06,10,12,14,16,18,20,22,24,26,28,30}`
 do
 # create the database
 	createdb -w -h $node -U postgres $db
@@ -12,7 +12,7 @@ do
 	echo $?
 	if [ "claw" != "$node" ]
 	then
-# add compute worker node to distribution list
+# add compute worker node to the distribution list
 		psql -h claw -U postgres $db -c 'SELECT * from master_add_node('\'$node\'','\'5432\'');'
 		echo $?
 	fi
