@@ -51,7 +51,7 @@ CREATE TABLE Posts (
 
 CREATE TABLE Tags (
     id                  INTEGER UNIQUE NOT NULL,    --Id
-    name                TEXT UNIQUE NOT NULL,       --TagName
+    name                TEXT NOT NULL,       --TagName
     count               INTEGER,                    --Count
     excerptpost         INTEGER,                    --ExcerptPostId
     wikipost            INTEGER                     --WikiPostId
