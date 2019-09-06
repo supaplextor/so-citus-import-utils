@@ -16,23 +16,7 @@ def escape(str):
     str = re.sub("\\\\", "\\\\\\\\", str)
     return str
 
-def tag_parse(str):
-    index = 0
-    while index < len(str):
-        if str[index] == '<':
-            try:
-                end_tag = str[index:].index('>')
-                yield str[(index+1):(index+end_tag)]
-                index += end_tag + 1
-            except ValueError:
-                raise Exception("Tag parsing error in \"%s\"" % str);
-        else:
-            raise Exception("Tag parsing error in \"%s\"" % str);
-
-tags = {}
-tag_id = 1
-
-badges = ElementTree.parse(sys.stdin) 
+postHistory = ElementTree.iterparse(sys.stdin) 
 print "COPY posthistory (id, type, postid, revisionguid, creation, userid, userdisplaymame, text) FROM stdin;"
 
 for event, post in postHistory:

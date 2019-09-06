@@ -12,9 +12,9 @@ set -x
 db=raspberrypi
 db_host=claw
 
-for ref in badges posthistory postlinks posts tags users votes
+for Ref in Badges PostHistory PostLinks Posts Tags Users Votes
 do
-Ref=$(echo "$ref" | awk '{for (i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)} 1')
+ref=$(echo "$Ref" | awk '{print tolower($0)}' )
 
 	if [ "${db}" == "stackoverflow" ]
 	then

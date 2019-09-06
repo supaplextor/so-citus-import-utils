@@ -28,7 +28,7 @@ def tag_parse(str):
         else:
             raise Exception("Tag parsing error in \"%s\"" % str);
 
-badges = ElementTree.parse(sys.stdin) 
+badges = ElementTree.iterparse(sys.stdin) 
 print "COPY Badges (id, userid, name, _date, badgeclass, tagbased) FROM stdin;"
 
 for event, badge in badges:
