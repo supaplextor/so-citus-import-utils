@@ -8,4 +8,11 @@ Forking https://github.com/badmonster-nc/stackoverflow_in_pg and using shell pip
 
 StackOverflow exports can be downloaded from https://archive.org/download/stackexchange
 
-After citus extensions "make install". I usually clone things in ~/Projects/ or ~/usr/src/.
+After citus extensions "make install". I usually clone things in ~/Projects/ or ~/usr/src/.  Unless an elegant solution is available, for the meantime hostnames are hardcoded in scripts.  This lab is just PoC, it's up to you to fix hostnames etc in these examples. This use case is to burn in citus with a real world data set.
+
+The so archive of 7z files should reside in "stackoverflow/" or "../stackoverflow" relative to the "so-citus-import-utils" directory.
+
+```
+git clone https://github.com/supaplextor/so-citus-import-utils.git
+./import-site math
+```
