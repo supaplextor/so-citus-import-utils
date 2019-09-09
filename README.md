@@ -14,5 +14,5 @@ The so archive of 7z files should reside in "stackoverflow/" or "../stackoverflo
 
 ```
 git clone https://github.com/supaplextor/so-citus-import-utils.git
-./import-site math
+./import-site.sh math
 ```
