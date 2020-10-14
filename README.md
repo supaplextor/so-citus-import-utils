@@ -18,3 +18,6 @@ git clone https://github.com/supaplextor/so-citus-import-utils.git
 cd so-citus-import-utils
 ./import-site.sh math
 ```
+# Archive Status Oct 13 2020
+
+The worker nodes have been offline for sometime, so I have no way to fully keep testing this.  The stackoverflow export allowed me to dig into the db without hammering their website.
